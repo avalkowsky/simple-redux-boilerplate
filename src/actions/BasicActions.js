@@ -1,4 +1,4 @@
-import { INCREMENT_COUNTER, DECREMENT_COUNTER } from '../constants/ActionTypes';
+import { INCREMENT_COUNTER, DECREMENT_COUNTER, RANDOMIZE_WORD, GET_COMMENTS } from '../constants/ActionTypes';
 
 export function increment() {
   return {
@@ -30,4 +30,19 @@ export function incrementAsync() {
       dispatch(increment());
     }, 1000);
   };
+}
+
+export function changeWord() {
+    const words = ['man','woman','banana','apple','żymła','jam','car','coche', 'bulanda','estrella'];
+    return {
+        type: RANDOMIZE_WORD,
+        payload: words[Math.floor(Math.random()*10)]
+    };
+}
+
+export function getData(promise) {
+    return {
+        type: GET_COMMENTS,
+        payload: promise
+    };
 }

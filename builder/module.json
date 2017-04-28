@@ -1,0 +1,25 @@
+{
+    "widgets": [
+        {
+            "id": "reactandredux",
+            "title": "React and Redux app",
+            "settings": {
+                "comment" : "Top widget with virtual sub elements for querying from outside",
+                "viewUrl": "index.html",
+                "zipkin": {
+                    "api" : "https://api.yaas.io/hybris/zipkin-proxy/v1/api/v1/",
+                    "url" : {
+                        "traceList" : "traces",
+                        "traceDetails" : "trace"
+                    }
+                },
+                "rest" : {
+                    "resourceUrlWhitelist" : [
+                        "https://tracing-builder-module.us-east.modules.yaas.io/**"
+                    ]
+                },
+                "graphViewerModuleBasePath" : "y-profile-main/yprofile-dev-tool-graph-viewer-streaming/"
+            }
+        }
+    ]
+}
